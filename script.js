@@ -4,76 +4,110 @@ const candidates = [
         name: "Andrea Dooley",
         title: "Labor Arbitrator & Community Leader",
         image: "images/AD-14 Candidate Headshots/Andrea Dooley.jpg",
-        bio: `<p>A distinguished labor arbitrator and community leader with extensive experience in dispute resolution and public service.</p>
-              <h5 class="mt-4">Current Roles</h5>
+        shortBio: "Experienced labor arbitrator and community leader with over 20 years in dispute resolution and public service.",
+        bio: `<p>A distinguished labor arbitrator and community leader with over two decades of experience in labor relations, dispute resolution, and public service.</p>
+              
+              <h5>Professional Experience</h5>
               <ul>
-                  <li>Labor Arbitrator hearing public and private sector grievance disputes throughout California</li>
-                  <li>Member of the National Academy of Arbitrators</li>
-                  <li>Published author of two books on Labor Arbitration</li>
-              </ul>
-              <h5 class="mt-4">Key Experience</h5>
-              <ul>
-                  <li>Former Oakland Police Commissioner (2017-2019)</li>
-                  <li>President and Treasurer of Oakland Technical High School PTSA (2020-2024)</li>
+                  <li>Full-time Labor Arbitrator since 2014, handling grievance arbitrations, civil service hearings, and fact-finding hearings</li>
+                  <li>Lecturer at Berkeley Law School, University of California (2022-present)</li>
+                  <li>Member of Federal Mediation and Conciliation Service (FMCS) panels</li>
+                  <li>Author of "The Labor Arbitration Career" (2022)</li>
                   <li>Former partner at Weinberg, Roger & Rosenfeld, representing unions and trust funds</li>
+              </ul>
+
+              <h5>Public Service & Leadership</h5>
+              <ul>
+                  <li>Oakland Police Commissioner (2017-2019), focusing on police reform and accountability</li>
+                  <li>President and Treasurer of Oakland Technical High School PTSA (2020-2024)</li>
                   <li>Northern California National Coordinator for Coalition of Kaiser-Permanente Unions</li>
                   <li>Safety Leader at Oakland and Richmond Kaiser Foundation Hospitals</li>
-                  <li>Oversaw AFL-CIO Voter Protection Project in Nevada (2008)</li>
+                  <li>AFL-CIO Voter Protection Project Leader in Nevada (2008)</li>
               </ul>
-              <h5 class="mt-4">Priorities</h5>
+
+              <h5>Areas of Expertise</h5>
               <ul>
-                  <li>Labor relations and workers' rights</li>
-                  <li>Police reform and accountability</li>
-                  <li>Education system improvement</li>
-                  <li>Dispute resolution and mediation</li>
+                  <li>Contract interpretation and disciplinary issues</li>
+                  <li>Employment law and representation issues</li>
+                  <li>Healthcare, entertainment, building trades, and public sector arbitration</li>
+                  <li>ERISA and occupational safety and health</li>
+                  <li>Mentoring and supporting new arbitrators</li>
               </ul>`,
-        statement: "Committed to bringing expertise in labor relations, police reform, and education to serve AD-14. Skilled mediator focused on resolving complex disputes and building consensus for progressive change."
+        statement: "As your ADEM delegate, I will bring over 20 years of experience in labor relations and dispute resolution to fight for workers' rights, fair labor practices, and police accountability. My background in healthcare, education, and public service has given me a deep understanding of the challenges facing our communities. I am committed to advancing progressive policies that protect workers, improve public education, and ensure accountability in our institutions."
     },
     {
         name: "Anthony Caro",
-        title: "Education Policy Advocate",
+        title: "Education Advocate & US Army Veteran",
         image: "images/AD-14 Candidate Headshots/Anthony Caro.jpg",
-        bio: `<p>A dedicated education advocate and community organizer with military service experience and a strong commitment to public education.</p>
-              <h5 class="mt-4">Background</h5>
+        shortBio: "Education advocate, US Army veteran, and founder of Citizens Power Network, dedicated to improving public schools and civic engagement.",
+        bio: `<p>A passionate education advocate and military veteran committed to improving public education and civic engagement in our communities.</p>
+              
+              <h5>Education & Military Service</h5>
               <ul>
-                  <li>US Army Sergeant and Non-commissioned Officer</li>
-                  <li>Treasurer of West County Democratic Club</li>
-                  <li>Experienced education policy advocate</li>
+                  <li>UC Berkeley student majoring in Political Science, Philosophy, and History</li>
+                  <li>Served 4 years active duty in the U.S. Army (South Korea and Kuwait)</li>
+                  <li>Current Sergeant in the National Guard</li>
+                  <li>Graduate of Los Angeles public schools</li>
               </ul>
-              <h5 class="mt-4">Priorities</h5>
+
+              <h5>Community Leadership</h5>
               <ul>
-                  <li>Improving public education systems</li>
-                  <li>Supporting teachers and education professionals</li>
-                  <li>Advancing career readiness programs</li>
-                  <li>Implementing community schools model</li>
+                  <li>Founder of Citizens Power Network, focusing on K-12 civic engagement</li>
+                  <li>Candidate for Contra Costa County Board of Education Area 1 (2024)</li>
+                  <li>Former candidate for West Contra Costa Unified School District board (2018)</li>
+                  <li>Organized voter registration drives for WCCUSD students</li>
+                  <li>Collaborated with Healthy Richmond and RYSE Center on youth initiatives</li>
+              </ul>
+
+              <h5>Key Initiatives</h5>
+              <ul>
+                  <li>Organizing for school safety and gun violence prevention</li>
+                  <li>Advocating for community schools model implementation</li>
+                  <li>Working to improve teacher retention and support</li>
+                  <li>Enhancing college and career readiness programs</li>
+                  <li>Building partnerships between schools and community organizations</li>
               </ul>`,
-        statement: "Champion for education system improvement, worker's rights, and universal healthcare. Advocates for progressive education policies, supporting teachers, career readiness, and community schools model."
+        statement: "I am running to be your ADEM delegate to fight for quality public education, safe schools, and civic engagement. Drawing from my experience as a veteran, education advocate, and community organizer, I will work to ensure our Democratic Party prioritizes educational equity, supports our teachers, and creates pathways to success for all students. Together, we can build stronger community schools and prepare our youth for the challenges ahead."
     },
     {
         name: "Cesar Zepeda",
-        title: "Richmond City Councilmember",
+        title: "Richmond City Councilmember & LGBTQ+ Leader",
         image: "images/AD-14 Candidate Headshots/Cesar Zepeda.jpg",
-        bio: `<p>A groundbreaking leader in Richmond politics and a champion for LGBTQ+ rights and community development.</p>
-              <h5 class="mt-4">Leadership Roles</h5>
+        shortBio: "First openly gay Richmond City Council member, co-founder of Richmond Rainbow Pride, and champion for affordable housing and LGBTQ+ rights.",
+        bio: `<p>A groundbreaking leader in Richmond politics and a tireless advocate for LGBTQ+ rights, affordable housing, and community development.</p>
+              
+              <h5>Historic Leadership</h5>
               <ul>
-                  <li>First openly gay man on Richmond City Council</li>
-                  <li>Co-founder and president of Richmond Rainbow Pride</li>
+                  <li>First openly gay man elected to Richmond City Council (2022)</li>
+                  <li>Co-founder and President of Richmond Rainbow Pride</li>
+                  <li>President of Hilltop District Neighborhood Council</li>
                   <li>Co-founder of Somos Latin@s</li>
-                  <li>Founder of Hilltop District Homeowners & Stakeholders Association</li>
               </ul>
-              <h5 class="mt-4">Key Initiatives</h5>
+
+              <h5>Housing & Community Development</h5>
               <ul>
-                  <li>Challenging oil company pollution</li>
-                  <li>Raising minimum wage</li>
-                  <li>Implementing rent control</li>
-                  <li>Improving community policing</li>
+                  <li>Leading initiatives to create affordable housing throughout Richmond</li>
+                  <li>Advocating for removal of bureaucratic barriers to housing development</li>
+                  <li>Proposed $300,000 contribution for tiny house project to house homeless youth</li>
+                  <li>Successfully completed Vista Del Mar Park infrastructure project</li>
+                  <li>Working to utilize city-owned land for affordable housing development</li>
+              </ul>
+
+              <h5>Policy Achievements</h5>
+              <ul>
+                  <li>Established Richmond as a welcoming city for LGBTQ+ residents and businesses</li>
+                  <li>Advanced environmental justice initiatives against industrial pollution</li>
+                  <li>Supported minimum wage increases and worker protections</li>
+                  <li>Implemented rent control measures</li>
+                  <li>Enhanced community policing programs</li>
               </ul>`,
-        statement: "Progressive leader focused on challenging oil company pollution, raising minimum wage, implementing rent control, and improving community policing. Dedicated to empowering residents and community development."
+        statement: "As your ADEM delegate, I will continue fighting for affordable housing, environmental justice, and LGBTQ+ rights. My experience as Richmond's first openly gay councilmember has shown me the importance of representation and the power of community-driven change. I am committed to making our Democratic Party more inclusive while addressing the critical issues of housing affordability, environmental protection, and economic justice."
     },
     {
         name: "Connie Taylor-Smith",
         title: "Community Advocate",
         image: "images/AD-14 Candidate Headshots/Connie Taylor-Smith.jpg",
+        shortBio: "Progressive community advocate working to advance social justice and empower local voices in Assembly District 14.",
         bio: `<p>A dedicated community advocate working to advance progressive values in Assembly District 14.</p>
               <h5 class="mt-4">Focus Areas</h5>
               <ul>
@@ -87,6 +121,7 @@ const candidates = [
         name: "Dan Kalb",
         title: "Environmental Advocate",
         image: "images/AD-14 Candidate Headshots/Dan Kalb.jpeg",
+        shortBio: "Environmental policy leader with 12 years on Oakland City Council. Champion for climate action, affordable housing, and gun violence prevention.",
         bio: `<p>A seasoned environmental policy leader with extensive experience in local government and progressive reform.</p>
               <h5 class="mt-4">Experience</h5>
               <ul>
@@ -108,6 +143,7 @@ const candidates = [
         name: "Dilli Bhattarai",
         title: "Hercules City Councilmember",
         image: "images/AD-14 Candidate Headshots/Dilli Bhattarai.jpg",
+        shortBio: "Hercules City Council member and finance expert advocating for sustainable transportation and inclusive community development.",
         bio: `<p>A passionate advocate for sustainable transportation and regional connectivity, bringing extensive experience in both public service and finance.</p>
               <h5 class="mt-4">Current Roles</h5>
               <ul>
@@ -133,6 +169,7 @@ const candidates = [
         name: "Gabe Sandoval",
         title: "Planning Commissioner",
         image: "images/AD-14 Candidate Headshots/Gabe Sandoval.jpg",
+        shortBio: "State Senate staff member and Pinole Planning Commissioner working to improve housing accessibility and public transit.",
         bio: `<p>A dedicated public servant with extensive experience in state government and community service.</p>
               <h5 class="mt-4">Current Roles</h5>
               <ul>
@@ -158,6 +195,7 @@ const candidates = [
         name: "Laura Babitt",
         title: "Former School Board Director",
         image: "images/AD-14 Candidate Headshots/Laura Babitt.JPG",
+        shortBio: "Education advocate who improved teacher pay by 30% and expanded career programs. Champion for educational equity and youth empowerment.",
         bio: `<p>A dedicated education advocate with 16 years of experience creating just and equitable public schools in Berkeley.</p>
               <h5 class="mt-4">Key Accomplishments</h5>
               <ul>
@@ -180,6 +218,7 @@ const candidates = [
         name: "Neil Tsutsui",
         title: "Environmental Scientist & Professor",
         image: "images/AD-14 Candidate Headshots/Neil Tsutsui.jpg",
+        shortBio: "UC Berkeley professor and environmental scientist leading research on climate change and forest conservation. Former chair of multiple environmental committees.",
         bio: `<p>A distinguished environmental scientist and educator with extensive experience in environmental leadership and conservation.</p>
               <h5 class="mt-4">Current Roles</h5>
               <ul>
@@ -205,6 +244,7 @@ const candidates = [
         name: "Nick Pilch",
         title: "Former Mayor, Albany",
         image: "images/AD-14 Candidate Headshots/Nick Pilch.jpeg",
+        shortBio: "Former Albany Mayor and current BART operator championing transportation equity and housing justice. Leader in environmental protection and LGBTQ+ rights.",
         bio: `<p>An experienced local government leader and environmental advocate with a strong track record in transportation and housing policy.</p>
               <h5 class="mt-4">Experience</h5>
               <ul>
@@ -232,6 +272,7 @@ const candidates = [
         name: "Sarah Bell",
         title: "Housing Advocate",
         image: "images/AD-14 Candidate Headshots/Sarah Bell.jpg",
+        shortBio: "Housing advocate and labor organizer leading East Bay YIMBY. Tech worker organizing for workers' rights and affordable housing near transit.",
         bio: `<p>A dedicated housing advocate and labor organizer with a strong commitment to progressive values and community development.</p>
               <h5 class="mt-4">Current Roles</h5>
               <ul>
@@ -259,6 +300,7 @@ const candidates = [
         name: "Susan Wengraf",
         title: "Former Vice Mayor and Councilmember",
         image: "images/AD-14 Candidate Headshots/Susan Wengraf.jpg",
+        shortBio: "16-year Berkeley City Council veteran leading regional wildfire safety initiatives. Champion for housing affordability and government transparency.",
         bio: `<p>A seasoned public servant with extensive experience in local government and environmental protection.</p>
               <h5 class="mt-4">Experience</h5>
               <ul>
@@ -285,6 +327,7 @@ const candidates = [
         name: "Teddy Gray King",
         title: "Former Mayor, Piedmont",
         image: "images/AD-14 Candidate Headshots/Teddy Gray King.jpg",
+        shortBio: "Former Piedmont Mayor who passed climate action plans and expanded housing. Transportation commissioner advancing regional solutions.",
         bio: `<p>An accomplished public servant with a strong track record in housing, environmental policy, and transportation planning.</p>
               <h5 class="mt-4">Key Accomplishments as Mayor</h5>
               <ul>
@@ -310,6 +353,7 @@ const candidates = [
         name: "Y'Anad Burrell",
         title: "Health Equity Advocate",
         image: "images/AD-14 Candidate Headshots/Y_Anad Burrell.jpg",
+        shortBio: "Mental Health Commissioner and environmental justice leader improving health outcomes in Richmond and Contra Costa County.",
         bio: `<p>A dedicated health equity advocate with extensive experience in community health and environmental justice.</p>
               <h5 class="mt-4">Current Roles</h5>
               <ul>
@@ -339,18 +383,37 @@ function createCandidateCard(candidate) {
     const article = document.createElement('article');
     article.className = 'candidate-card';
     article.setAttribute('role', 'listitem');
+    
+    // Add custom image positioning classes
+    let imageClass = 'candidate-image';
+    if (candidate.name === 'Connie Taylor-Smith') {
+        imageClass += ' connie-image';
+    } else if (candidate.name === 'Dilli Bhattarai') {
+        imageClass += ' dilli-image';
+    }
+    
     article.innerHTML = `
-        <img src="${candidate.image}" alt="${candidate.name}" class="candidate-image">
+        <img src="${candidate.image}" alt="${candidate.name}" class="${imageClass}">
         <div class="candidate-info">
             <h3 class="candidate-name">${candidate.name}</h3>
             <p class="candidate-title">${candidate.title}</p>
-            <p class="candidate-bio">${candidate.bio}</p>
+            <p class="candidate-bio">${candidate.shortBio}</p>
             <button class="read-more" aria-label="Read more about ${candidate.name}">Read More</button>
         </div>
     `;
 
+    // Add click handler for the entire card
+    article.addEventListener('click', (e) => {
+        // Don't trigger twice if clicking the Read More button
+        if (!e.target.classList.contains('read-more')) {
+            showCandidateModal(candidate);
+        }
+    });
+
     // Add click handler for the read more button
-    article.querySelector('.read-more').addEventListener('click', () => {
+    const readMoreBtn = article.querySelector('.read-more');
+    readMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent double-triggering with card click
         showCandidateModal(candidate);
     });
 
@@ -358,64 +421,63 @@ function createCandidateCard(candidate) {
 }
 
 // Function to show candidate modal
-async function showCandidateModal(candidate) {
-    // Create modal container
+function showCandidateModal(candidate) {
     const modal = document.createElement('div');
     modal.className = 'modal';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-labelledby', 'modal-title');
     
-    // Try to fetch the full statement
-    let statement = '';
-    try {
-        const response = await fetch(candidate.statement);
-        if (response.ok) {
-            statement = await response.text();
-        }
-    } catch (e) {
-        console.error('Error loading candidate statement:', e);
-    }
-
     modal.innerHTML = `
         <div class="modal-content">
-            <button class="close-modal" aria-label="Close">×</button>
             <div class="modal-header">
-                <img src="${candidate.image}" alt="${candidate.name}" class="modal-image">
-                <div class="modal-title-group">
-                    <h2 id="modal-title">${candidate.name}</h2>
-                    <p class="modal-subtitle">${candidate.title}</p>
+                <div class="modal-header-content">
+                    <img src="${candidate.image}" alt="${candidate.name}" class="modal-candidate-image">
+                    <div class="modal-title-group">
+                        <h2 id="modal-title" class="modal-title">${candidate.name}</h2>
+                        <p class="modal-subtitle">${candidate.title}</p>
+                        <a href="https://docs.google.com/document/d/1ZMa8lVLAsc6mMSspWeUPIzzCoasGhtpAkSOEfQYc-GU/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="statement-button">
+                            View Candidate Statement
+                            <span class="visually-hidden">for ${candidate.name} (Opens in new tab)</span>
+                        </a>
+                    </div>
                 </div>
+                <button class="modal-close" aria-label="Close">×</button>
             </div>
             <div class="modal-body">
                 <div class="candidate-statement">
-                    ${statement || candidate.bio}
+                    ${candidate.bio}
                 </div>
             </div>
         </div>
     `;
 
     // Add close functionality
-    const closeBtn = modal.querySelector('.close-modal');
+    const closeBtn = modal.querySelector('.modal-close');
     closeBtn.addEventListener('click', () => {
-        modal.remove();
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
     });
 
     // Close on background click
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.remove();
+            modal.classList.remove('active');
+            setTimeout(() => modal.remove(), 300);
         }
     });
 
     // Close on escape key
     document.addEventListener('keydown', function closeOnEscape(e) {
         if (e.key === 'Escape') {
-            modal.remove();
+            modal.classList.remove('active');
+            setTimeout(() => modal.remove(), 300);
             document.removeEventListener('keydown', closeOnEscape);
         }
     });
 
     document.body.appendChild(modal);
+    // Trigger animation after append
+    setTimeout(() => modal.classList.add('active'), 10);
 }
 
 // Initialize the candidate grid
@@ -425,6 +487,33 @@ function initializeCandidateGrid() {
         grid.appendChild(createCandidateCard(candidate));
     });
 }
+
+// Get the scroll-to-top button and nav brand link
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const navBrandLink = document.querySelector(".nav-brand-link");
+
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollTopBtn.classList.add("show");
+    } else {
+        scrollTopBtn.classList.remove("show");
+    }
+};
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Add click handler for nav brand link
+navBrandLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToTop();
+});
 
 // Initialize when the DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeCandidateGrid); 

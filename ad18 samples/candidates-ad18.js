@@ -2,9 +2,11 @@
 function createCandidateCard(candidate) {
     return `
         <div class="col-md-4 col-sm-6 mb-4">
-            <div class="candidate-card" data-bs-toggle="modal" data-bs-target="#${candidate.id}Modal">
+            <div class="candidate-card" data-bs-toggle="modal" data-bs-target="#${candidate.id}Modal" role="button" tabindex="0">
                 <img src="images/AD-18 Candidate Headshots/${candidate.name}.${candidate.imageExt}" 
-                     alt="${candidate.name}" class="card-img-top">
+                     alt="${candidate.name} - ${candidate.title}" 
+                     class="card-img-top"
+                     loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title">${candidate.name}</h5>
                     <h6 class="card-subtitle mb-2">${candidate.title}</h6>
@@ -18,21 +20,31 @@ function createCandidateCard(candidate) {
 // Function to create candidate modal
 function createCandidateModal(candidate) {
     return `
-        <div class="modal fade" id="${candidate.id}Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="${candidate.id}Modal" tabindex="-1" aria-labelledby="${candidate.id}ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">${candidate.name}</h5>
+                        <h5 class="modal-title" id="${candidate.id}ModalLabel">${candidate.name}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="images/AD-18 Candidate Headshots/${candidate.name}.${candidate.imageExt}" 
-                                     alt="${candidate.name}" class="img-fluid rounded mb-3">
+                                     alt="${candidate.name} - ${candidate.title}" class="img-fluid rounded mb-3">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Full Bio</a>
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Statement</a>
+                                    <a href="https://docs.google.com/document/d/1J1YPSGojJHr59V8M3AvoqHf8PI19PF0ws4EQFmJSX48/edit?tab=t.0" 
+                                       class="btn btn-outline-primary" 
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="bi bi-file-text"></i> View Full Bio
+                                    </a>
+                                    <a href="https://docs.google.com/document/d/1ue1J2XClSlZ4NSEhgbBAESkRN5YvWKGOS0j_PxmSgPE/edit?usp=sharing" 
+                                       class="btn btn-outline-primary" 
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="bi bi-file-text"></i> View Statement
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -104,64 +116,34 @@ const candidates = [
         imageExt: "webp"
     },
     {
-        name: "Sam Davis",
-        id: "samDavis",
-        title: "Oakland School Board President",
-        shortBio: "Former teacher and parent activist, past President of the Oakland School Board, leading initiatives for college readiness, fiscal sustainability, and equitable facilities funding. Advocate for affordable housing and immigrant rights.",
-        bio: `<p>Sam is a former teacher and parent activist who served on the Oakland School Board from 2021 to 2025, serving as President in 2024.</p>
-              <h5 class="mt-4">Key Accomplishments as Oakland School Board President</h5>
-              <ul>
-                  <li><b>Renewed College and Career for All Initiative (Measure H):</b> Led the campaign to renew this critical initiative in Oakland high schools, ensuring all students have pathways to college and careers. Measure H passed in 2022 with an overwhelming 81% yes vote, demonstrating strong community support.</li>
-                  <li><b>Advocated for Fiscal Sustainability:</b> Championed responsible budgeting practices to improve the financial health of the Oakland Unified School District.</li>
-                  <li><b>Implemented Oakland Youth Vote:</b> Successfully advocated for the implementation of Oakland Youth Vote in 2024, empowering young people to participate in local elections.</li>
-                  <li><b>Equitable Facilities Funding:</b> Ensured equitable allocation of OUSD facilities funds to renovate four schools in the flatlands, addressing broken promises from previous administrations and improving learning environments for underserved communities.</li>
-              </ul>
-              <h5 class="mt-4">Additional Priorities and Information</h5>
-              <ul>
-                  <li><b>Affordable Housing Advocate:</b> Promotes building affordable and workforce housing on unused school district land to combat housing insecurity in Oakland.</li>
-                  <li><b>Immigrant Rights Champion:</b> Stands in solidarity with the immigrant community and opposes deportation efforts, drawing inspiration from his family's history of fleeing persecution. He participated in the "Let Our People Go" protests at Richmond jail, contributing to the end of the county's contract with ICE.</li>
-                  <li><b>Education Equity and Inclusion:</b> A strong advocate for public education and inclusivity, including supporting the rights of trans youth and gender identity expression in schools and sports. Led the Measure H campaign and supported the implementation of Oakland Youth Vote.</li>
-                  <li><b>Good Governance and Labor Partnerships:</b> Believes in responsible stewardship of public funds and values collaboration with labor unions as essential for effective governance.</li>
-                  <li><b>Former ADEM Delegate:</b> Served as an ADEM delegate for Assembly District 18 in 2019-2020.</li>
-              </ul>
-              <h5 class="mt-4">Current Role</h5>
-              <p>Currently works for the University of California on a project tracking the eligibility of students from across California for CSU and UC admission.</p>
-              <h5 class="mt-4">Education</h5>
-              <ul>
-                  <li>BA in Math from UC Berkeley</li>
-                  <li>MS in Math from Cal State East Bay</li>
-              </ul>`,
-        imageExt: "jpg"
-    },
-    {
-        name: "Ben Gould",
-        id: "benGould",
-        title: "Environmental Policy Consultant",
-        shortBio: "Climate policy consultant and community organizer, leading successful campaigns for safer streets and better housing in Berkeley.",
-        bio: `<p>Ben Gould has dedicated the past decade to community organizing and political advocacy in Berkeley, focusing on practical solutions to improve local governance and infrastructure. He is passionate about making government work effectively to address everyday needs and achieve progressive goals.</p>
+        name: "Cathy Adams",
+        id: "cathy",
+        title: "Chamber of Commerce President & Community Leader",
+        shortBio: "President/CEO of Oakland African American Chamber of Commerce, leading economic development initiatives and advocating for Black-owned businesses and affordable housing.",
+        bio: `<p>Cathy D. Adams has been a transformative force in Oakland's business community since 1983, serving as an effective communicator, natural influencer, and dedicated advocate for economic justice. Under her leadership, the Oakland African American Chamber of Commerce has become a powerful voice for Black-owned businesses and community development.</p>
 
-              <h5 class="mt-4">Key Accomplishments</h5>
+              <h5 class="mt-4">Leadership & Impact</h5>
               <ul>
-                  <li><b>Authored and Organized Winning Campaigns:</b> Successfully led the campaign for Berkeley's 2024 Measure FF, a citizen's initiative that will invest over $250 million in fixing Berkeley's streets and making them safer for walking and biking. This initiative addressed decades of neglect in city infrastructure.</li>
-                  <li><b>Organized Mark Humbert's Election to City Council:</b> Played a key role in organizing the winning campaign for Mark Humbert's first election to Berkeley City Council in 2022.</li>
+                  <li><b>OAACC Leadership:</b> As President and CEO of the Oakland African American Chamber of Commerce, leads initiatives supporting Black-owned businesses and economic development.</li>
+                  <li><b>COVID-19 Response:</b> Created and led the OAACC Resiliency Relief Program, raising over $1.1 million to support 250 African American owned businesses during the pandemic.</li>
+                  <li><b>National Recognition:</b> Led OAACC to be voted Chamber of the Year by the U.S. Black Chamber of Commerce in 2020, highlighting the organization's impact and effectiveness.</li>
               </ul>
 
-              <h5 class="mt-4">Leadership Roles</h5>
+              <h5 class="mt-4">Housing & Community Development</h5>
               <ul>
-                  <li>Board member for Make Oakland Better Now!</li>
-                  <li>Board member for Jewish Democratic Coalition of the Bay Area</li>
-                  <li>Steering committee member for Jewish Coalition of Berkeley</li>
-                  <li>Steering committee member for Berkeley Neighbors for Housing and Climate Action</li>
+                  <li><b>Affordable Housing:</b> Partners with companies like Nibbi/Baines Group on marketing and outreach for affordable housing projects.</li>
+                  <li><b>Community Education:</b> Organizes housing workshops and forums focused on affordable housing access and resources for disenfranchised communities.</li>
+                  <li><b>Economic Justice:</b> Advocates for policies that support both business development and housing affordability to create sustainable communities.</li>
               </ul>
 
-              <h5 class="mt-4">Professional Experience</h5>
-              <p>Ben works as a climate policy consultant for local governments across different regions, advising them on developing and implementing effective climate action plans and sustainable policies. His work focuses on practical and impactful strategies to mitigate climate change at the local level.</p>
-
-              <h5 class="mt-4">Education</h5>
+              <h5 class="mt-4">Additional Leadership Roles</h5>
               <ul>
-                  <li>Master's in Public Policy from UC Berkeley</li>
-                  <li>Master's in Environmental Engineering from UC Berkeley</li>
-              </ul>`,
+                  <li><b>Women's Leadership:</b> Founding president of the National Coalition of 100 Black Women, Inc., Oakland Bay Area Chapter.</li>
+                  <li><b>Business Development:</b> Works with local and national partners to create opportunities for Black-owned businesses.</li>
+                  <li><b>Community Building:</b> Builds partnerships between business, government, and community organizations to advance economic equity.</li>
+              </ul>
+
+              <p class="mt-4">Guided by her mother's wisdom - "As you are moving up, take someone with you" - Cathy has dedicated her career to creating pathways for economic opportunity and community empowerment. Her work demonstrates the powerful connection between business success, affordable housing, and community well-being.</p>`,
         imageExt: "jpg"
     },
     {
@@ -194,42 +176,35 @@ const candidates = [
         imageExt: "JPG"
     },
     {
-        name: "Arielle Fleisher",
-        id: "arielle",
-        title: "Transportation Policy Advisor",
-        shortBio: "Former SPUR Transportation Policy Director, Bay Area Council Transportation Committee Co-Chair, and founder of Pandemic Moms Club.",
-        bio: `<p>Arielle Fleisher is running with the Housing & Climate Progressive Democratic Slate to bring her expertise in transportation and urban planning to address the critical challenges of housing affordability and climate change in Assembly District 18. She is a policy strategist in public health, urban planning, and design thinking, dedicated to improving government practices through innovative approaches and collaborative problem solving.</p>
+        name: "Ben Gould",
+        id: "benGould",
+        title: "Environmental Policy Consultant",
+        shortBio: "Climate policy consultant and community organizer, leading successful campaigns for safer streets and better housing in Berkeley.",
+        bio: `<p>Ben Gould has dedicated the past decade to community organizing and political advocacy in Berkeley, focusing on practical solutions to improve local governance and infrastructure. He is passionate about making government work effectively to address everyday needs and achieve progressive goals.</p>
+
+              <h5 class="mt-4">Key Accomplishments</h5>
+              <ul>
+                  <li><b>Authored and Organized Winning Campaigns:</b> Successfully led the campaign for Berkeley's 2024 Measure FF, a citizen's initiative that will invest over $250 million in fixing Berkeley's streets and making them safer for walking and biking. This initiative addressed decades of neglect in city infrastructure.</li>
+                  <li><b>Organized Mark Humbert's Election to City Council:</b> Played a key role in organizing the winning campaign for Mark Humbert's first election to Berkeley City Council in 2022.</li>
+              </ul>
+
+              <h5 class="mt-4">Leadership Roles</h5>
+              <ul>
+                  <li>Board member for Make Oakland Better Now!</li>
+                  <li>Board member for Jewish Democratic Coalition of the Bay Area</li>
+                  <li>Steering committee member for Jewish Coalition of Berkeley</li>
+                  <li>Steering committee member for Berkeley Neighbors for Housing and Climate Action</li>
+              </ul>
 
               <h5 class="mt-4">Professional Experience</h5>
-              <ul>
-                  <li><b>Current Role:</b> Co-Chair of the Bay Area Council's Transportation Committee, where she leads efforts to improve regional transportation coordination and accessibility.</li>
-                  <li><b>SPUR Leadership:</b> As former Transportation Policy Director, she worked extensively to enhance and better integrate the Bay Area's transportation system.</li>
-                  <li><b>SFMTA Experience:</b> Former Planning Analyst, contributing to San Francisco's transportation planning and policy development.</li>
-                  <li><b>Policy Impact:</b> Her advocacy has delivered concrete results:
-                      <ul>
-                          <li>Streamlining fares across transit systems</li>
-                          <li>Improving signage and wayfinding at stations</li>
-                          <li>Advocating for upgraded streets that are safer for everyone</li>
-                          <li>Developing innovative solutions for regional transportation challenges</li>
-                      </ul>
-                  </li>
-              </ul>
-
-              <h5 class="mt-4">Community Engagement & Leadership</h5>
-              <ul>
-                  <li><b>Pandemic Moms Club:</b> Founded and grew this vital network to support over 200 local moms with resources, advice, and community connection during challenging times.</li>
-                  <li><b>Local Voice:</b> Regular columnist for Splash Pad News, the newsletter for the Grand/Lake neighborhood, where she writes about transportation, urban planning, and community issues.</li>
-                  <li><b>Neighborhood Leadership:</b> Active member of the Grand Lake Neighborhood Council, working to improve local quality of life and community engagement.</li>
-              </ul>
+              <p>Ben works as a climate policy consultant for local governments across different regions, advising them on developing and implementing effective climate action plans and sustainable policies. His work focuses on practical and impactful strategies to mitigate climate change at the local level.</p>
 
               <h5 class="mt-4">Education</h5>
               <ul>
-                  <li>Master's in Urban Planning from University of Michigan</li>
-                  <li>Master's in Public Health from University of Michigan</li>
-              </ul>
-
-              <p class="mt-4">Based in Oakland, Arielle can often be found biking around with her husband and two small kids, experiencing firsthand the importance of safe, accessible, and sustainable transportation options for families.</p>`,
-        imageExt: "png"
+                  <li>Master's in Public Policy from UC Berkeley</li>
+                  <li>Master's in Environmental Engineering from UC Berkeley</li>
+              </ul>`,
+        imageExt: "jpg"
     },
     {
         name: "Sam Gould",
@@ -265,6 +240,36 @@ const candidates = [
         imageExt: "jpg"
     },
     {
+        name: "Sam Davis",
+        id: "samDavis",
+        title: "Oakland School Board President",
+        shortBio: "Former teacher and parent activist, past President of the Oakland School Board, leading initiatives for college readiness, fiscal sustainability, and equitable facilities funding. Advocate for affordable housing and immigrant rights.",
+        bio: `<p>Sam is a former teacher and parent activist who served on the Oakland School Board from 2021 to 2025, serving as President in 2024.</p>
+              <h5 class="mt-4">Key Accomplishments as Oakland School Board President</h5>
+              <ul>
+                  <li><b>Renewed College and Career for All Initiative (Measure H):</b> Led the campaign to renew this critical initiative in Oakland high schools, ensuring all students have pathways to college and careers. Measure H passed in 2022 with an overwhelming 81% yes vote, demonstrating strong community support.</li>
+                  <li><b>Advocated for Fiscal Sustainability:</b> Championed responsible budgeting practices to improve the financial health of the Oakland Unified School District.</li>
+                  <li><b>Implemented Oakland Youth Vote:</b> Successfully advocated for the implementation of Oakland Youth Vote in 2024, empowering young people to participate in local elections.</li>
+                  <li><b>Equitable Facilities Funding:</b> Ensured equitable allocation of OUSD facilities funds to renovate four schools in the flatlands, addressing broken promises from previous administrations and improving learning environments for underserved communities.</li>
+              </ul>
+              <h5 class="mt-4">Additional Priorities and Information</h5>
+              <ul>
+                  <li><b>Affordable Housing Advocate:</b> Promotes building affordable and workforce housing on unused school district land to combat housing insecurity in Oakland.</li>
+                  <li><b>Immigrant Rights Champion:</b> Stands in solidarity with the immigrant community and opposes deportation efforts, drawing inspiration from his family's history of fleeing persecution. He participated in the "Let Our People Go" protests at Richmond jail, contributing to the end of the county's contract with ICE.</li>
+                  <li><b>Education Equity and Inclusion:</b> A strong advocate for public education and inclusivity, including supporting the rights of trans youth and gender identity expression in schools and sports. Led the Measure H campaign and supported the implementation of Oakland Youth Vote.</li>
+                  <li><b>Good Governance and Labor Partnerships:</b> Believes in responsible stewardship of public funds and values collaboration with labor unions as essential for effective governance.</li>
+                  <li><b>Former ADEM Delegate:</b> Served as an ADEM delegate for Assembly District 18 in 2019-2020.</li>
+              </ul>
+              <h5 class="mt-4">Current Role</h5>
+              <p>Currently works for the University of California on a project tracking the eligibility of students from across California for CSU and UC admission.</p>
+              <h5 class="mt-4">Education</h5>
+              <ul>
+                  <li>BA in Math from UC Berkeley</li>
+                  <li>MS in Math from Cal State East Bay</li>
+              </ul>`,
+        imageExt: "jpg"
+    },
+    {
         name: "Lauren Wilson",
         id: "lauren",
         title: "Transportation and Urban Planning Policy Advocate",
@@ -295,6 +300,69 @@ const candidates = [
 
               <p class="mt-4">Lauren lives in Oakland with her spouse, their two small kids, and a big dog. She is committed to creating more livable, sustainable, and inclusive communities through effective policy-making and community engagement.</p>`,
         imageExt: "jpg"
+    },
+    {
+        name: "Zac Bowling",
+        id: "zac",
+        title: "Housing Activist & Union Organizer",
+        shortBio: "Progressive leader and digital advocate with 140,000+ followers, co-founder of East Bay YIMBY, and experienced ADEM delegate championing affordable housing and worker rights.",
+        bio: `<p>Zac Bowling is a lifelong Democrat and progressive activist who has dedicated his career to fighting for affordable housing, worker rights, and sustainable communities. As a current AD 18 delegate and co-founder of East Bay YIMBY, he brings extensive experience in grassroots organizing and digital advocacy to the Democratic Party.</p>
+
+              <h5 class="mt-4">Key Leadership Roles</h5>
+              <ul>
+                  <li><b>Housing Advocacy:</b> Co-founded East Bay YIMBY, leading campaigns for affordable housing and tenant protections across the East Bay.</li>
+                  <li><b>Labor Organizing:</b> Founding member of Alphabet Workers Union, organizing tech workers for better working conditions and corporate accountability.</li>
+                  <li><b>Democratic Party:</b> Serving as current AD 18 delegate for the past four years, advocating for progressive policies within the party.</li>
+              </ul>
+
+              <h5 class="mt-4">Current Positions</h5>
+              <ul>
+                  <li><b>City of Alameda:</b> Commissioner on the Open Government Commission, promoting transparency and accountability in local government.</li>
+                  <li><b>Sierra Club:</b> Member of SF Bay Chapter's NAC Housing Committee, working at the intersection of housing and environmental policy.</li>
+                  <li><b>Digital Advocacy:</b> Leading voice on housing and progressive issues with over 140,000 followers across TikTok and YouTube.</li>
+              </ul>
+
+              <h5 class="mt-4">Policy Priorities</h5>
+              <ul>
+                  <li><b>Housing Justice:</b> Advocating for policies to increase affordable housing supply and protect tenants' rights.</li>
+                  <li><b>Worker Rights:</b> Fighting for better working conditions, fair wages, and union representation.</li>
+                  <li><b>Environmental Sustainability:</b> Promoting sustainable urban development and climate-conscious housing policies.</li>
+                  <li><b>Government Transparency:</b> Working to ensure open, accountable governance at all levels.</li>
+              </ul>
+
+              <p class="mt-4">With over a decade of experience in housing advocacy and a strong track record of building progressive coalitions, Zac continues to fight for a more equitable and sustainable future. His unique combination of grassroots organizing, digital advocacy, and policy expertise makes him an effective voice for progressive change in the Democratic Party.</p>`,
+        imageExt: "webp"
+    },
+    {
+        name: "Bobbi Lopez",
+        id: "bobbi",
+        title: "Labor & Housing Policy Director",
+        shortBio: "Progressive leader with 20+ years of experience in labor organizing, housing policy, and community advocacy, currently serving as Policy Director for SEIU Local 1021.",
+        bio: `<p>Bobbi Lopez brings over two decades of experience fighting for working families, affordable housing, and progressive policies. As Policy Director for SEIU Local 1021, she leads initiatives that directly impact 60,000 workers across Northern California.</p>
+
+              <h5 class="mt-4">Key Leadership Roles</h5>
+              <ul>
+                  <li><b>SEIU Local 1021:</b> As Policy Director, oversees policy initiatives affecting 60,000 workers across Northern California, focusing on worker rights, affordable housing, and economic justice.</li>
+                  <li><b>Richmond Progressive Alliance:</b> Co-founder and steering committee member, helping build one of the Bay Area's most effective progressive political organizations.</li>
+                  <li><b>Richmond Planning Commission:</b> Former Commissioner, where she championed equitable development and affordable housing policies.</li>
+              </ul>
+
+              <h5 class="mt-4">Policy Achievements</h5>
+              <ul>
+                  <li><b>Housing Justice:</b> Led successful campaigns for tenant protections and rent control measures across multiple Bay Area cities.</li>
+                  <li><b>Labor Rights:</b> Negotiated groundbreaking labor agreements benefiting thousands of workers and their families.</li>
+                  <li><b>Environmental Justice:</b> Advocated for policies addressing climate change while ensuring a just transition for workers.</li>
+              </ul>
+
+              <h5 class="mt-4">Community Impact</h5>
+              <ul>
+                  <li><b>Coalition Building:</b> Successfully built diverse coalitions between labor unions, housing advocates, and environmental groups.</li>
+                  <li><b>Grassroots Organizing:</b> Trained and mentored numerous community organizers and activists.</li>
+                  <li><b>Policy Development:</b> Authored and implemented progressive policies addressing housing affordability, worker protections, and environmental justice.</li>
+              </ul>
+
+              <p class="mt-4">Bobbi's track record demonstrates her commitment to building power for working families and creating more equitable communities. Her experience in both policy development and grassroots organizing makes her uniquely qualified to represent AD-18 in the Democratic Party.</p>`,
+        imageExt: "jpeg"
     },
     {
         name: "Shawn Danino",
@@ -334,37 +402,6 @@ const candidates = [
         imageExt: "jpg"
     },
     {
-        name: "Bobbi Lopez",
-        id: "bobbi",
-        title: "Labor & Housing Policy Director",
-        shortBio: "Progressive leader with 20+ years of experience in labor organizing, housing policy, and community advocacy, currently serving as Policy Director for SEIU Local 1021.",
-        bio: `<p>Bobbi Lopez brings over two decades of experience fighting for working families, affordable housing, and progressive policies. As Policy Director for SEIU Local 1021, she leads initiatives that directly impact 60,000 workers across Northern California.</p>
-
-              <h5 class="mt-4">Key Leadership Roles</h5>
-              <ul>
-                  <li><b>SEIU Local 1021:</b> As Policy Director, oversees policy initiatives affecting 60,000 workers across Northern California, focusing on worker rights, affordable housing, and economic justice.</li>
-                  <li><b>Richmond Progressive Alliance:</b> Co-founder and steering committee member, helping build one of the Bay Area's most effective progressive political organizations.</li>
-                  <li><b>Richmond Planning Commission:</b> Former Commissioner, where she championed equitable development and affordable housing policies.</li>
-              </ul>
-
-              <h5 class="mt-4">Policy Achievements</h5>
-              <ul>
-                  <li><b>Housing Justice:</b> Led successful campaigns for tenant protections and rent control measures across multiple Bay Area cities.</li>
-                  <li><b>Labor Rights:</b> Negotiated groundbreaking labor agreements benefiting thousands of workers and their families.</li>
-                  <li><b>Environmental Justice:</b> Advocated for policies addressing climate change while ensuring a just transition for workers.</li>
-              </ul>
-
-              <h5 class="mt-4">Community Impact</h5>
-              <ul>
-                  <li><b>Coalition Building:</b> Successfully built diverse coalitions between labor unions, housing advocates, and environmental groups.</li>
-                  <li><b>Grassroots Organizing:</b> Trained and mentored numerous community organizers and activists.</li>
-                  <li><b>Policy Development:</b> Authored and implemented progressive policies addressing housing affordability, worker protections, and environmental justice.</li>
-              </ul>
-
-              <p class="mt-4">Bobbi's track record demonstrates her commitment to building power for working families and creating more equitable communities. Her experience in both policy development and grassroots organizing makes her uniquely qualified to represent AD-18 in the Democratic Party.</p>`,
-        imageExt: "jpeg"
-    },
-    {
         name: "Ashlee Jemmott",
         id: "ashlee",
         title: "Deputy Policy Analyst",
@@ -397,67 +434,42 @@ const candidates = [
         imageExt: "png"
     },
     {
-        name: "Zac Bowling",
-        id: "zac",
-        title: "Housing Activist & Union Organizer",
-        shortBio: "Progressive leader and digital advocate with 140,000+ followers, co-founder of East Bay YIMBY, and experienced ADEM delegate championing affordable housing and worker rights.",
-        bio: `<p>Zac Bowling is a lifelong Democrat and progressive activist who has dedicated his career to fighting for affordable housing, worker rights, and sustainable communities. As a current AD 18 delegate and co-founder of East Bay YIMBY, he brings extensive experience in grassroots organizing and digital advocacy to the Democratic Party.</p>
+        name: "Arielle Fleisher",
+        id: "arielle",
+        title: "Transportation Policy Advisor",
+        shortBio: "Former SPUR Transportation Policy Director, Bay Area Council Transportation Committee Co-Chair, and founder of Pandemic Moms Club.",
+        bio: `<p>Arielle Fleisher is running with the Housing & Climate Progressive Democratic Slate to bring her expertise in transportation and urban planning to address the critical challenges of housing affordability and climate change in Assembly District 18. She is a policy strategist in public health, urban planning, and design thinking, dedicated to improving government practices through innovative approaches and collaborative problem solving.</p>
 
-              <h5 class="mt-4">Key Leadership Roles</h5>
+              <h5 class="mt-4">Professional Experience</h5>
               <ul>
-                  <li><b>Housing Advocacy:</b> Co-founded East Bay YIMBY, leading campaigns for affordable housing and tenant protections across the East Bay.</li>
-                  <li><b>Labor Organizing:</b> Founding member of Alphabet Workers Union, organizing tech workers for better working conditions and corporate accountability.</li>
-                  <li><b>Democratic Party:</b> Serving as current AD 18 delegate for the past four years, advocating for progressive policies within the party.</li>
+                  <li><b>Current Role:</b> Co-Chair of the Bay Area Council's Transportation Committee, where she leads efforts to improve regional transportation coordination and accessibility.</li>
+                  <li><b>SPUR Leadership:</b> As former Transportation Policy Director, she worked extensively to enhance and better integrate the Bay Area's transportation system.</li>
+                  <li><b>SFMTA Experience:</b> Former Planning Analyst, contributing to San Francisco's transportation planning and policy development.</li>
+                  <li><b>Policy Impact:</b> Her advocacy has delivered concrete results:
+                      <ul>
+                          <li>Streamlining fares across transit systems</li>
+                          <li>Improving signage and wayfinding at stations</li>
+                          <li>Advocating for upgraded streets that are safer for everyone</li>
+                          <li>Developing innovative solutions for regional transportation challenges</li>
+                      </ul>
+                  </li>
               </ul>
 
-              <h5 class="mt-4">Current Positions</h5>
+              <h5 class="mt-4">Community Engagement & Leadership</h5>
               <ul>
-                  <li><b>City of Alameda:</b> Commissioner on the Open Government Commission, promoting transparency and accountability in local government.</li>
-                  <li><b>Sierra Club:</b> Member of SF Bay Chapter's NAC Housing Committee, working at the intersection of housing and environmental policy.</li>
-                  <li><b>Digital Advocacy:</b> Leading voice on housing and progressive issues with over 140,000 followers across TikTok and YouTube.</li>
+                  <li><b>Pandemic Moms Club:</b> Founded and grew this vital network to support over 200 local moms with resources, advice, and community connection during challenging times.</li>
+                  <li><b>Local Voice:</b> Regular columnist for Splash Pad News, the newsletter for the Grand/Lake neighborhood, where she writes about transportation, urban planning, and community issues.</li>
+                  <li><b>Neighborhood Leadership:</b> Active member of the Grand Lake Neighborhood Council, working to improve local quality of life and community engagement.</li>
               </ul>
 
-              <h5 class="mt-4">Policy Priorities</h5>
+              <h5 class="mt-4">Education</h5>
               <ul>
-                  <li><b>Housing Justice:</b> Advocating for policies to increase affordable housing supply and protect tenants' rights.</li>
-                  <li><b>Worker Rights:</b> Fighting for better working conditions, fair wages, and union representation.</li>
-                  <li><b>Environmental Sustainability:</b> Promoting sustainable urban development and climate-conscious housing policies.</li>
-                  <li><b>Government Transparency:</b> Working to ensure open, accountable governance at all levels.</li>
+                  <li>Master's in Urban Planning from University of Michigan</li>
+                  <li>Master's in Public Health from University of Michigan</li>
               </ul>
 
-              <p class="mt-4">With over a decade of experience in housing advocacy and a strong track record of building progressive coalitions, Zac continues to fight for a more equitable and sustainable future. His unique combination of grassroots organizing, digital advocacy, and policy expertise makes him an effective voice for progressive change in the Democratic Party.</p>`,
-        imageExt: "webp"
-    },
-    {
-        name: "Cathy Adams",
-        id: "cathy",
-        title: "Chamber of Commerce President & Community Leader",
-        shortBio: "President/CEO of Oakland African American Chamber of Commerce, leading economic development initiatives and advocating for Black-owned businesses and affordable housing.",
-        bio: `<p>Cathy D. Adams has been a transformative force in Oakland's business community since 1983, serving as an effective communicator, natural influencer, and dedicated advocate for economic justice. Under her leadership, the Oakland African American Chamber of Commerce has become a powerful voice for Black-owned businesses and community development.</p>
-
-              <h5 class="mt-4">Leadership & Impact</h5>
-              <ul>
-                  <li><b>OAACC Leadership:</b> As President and CEO of the Oakland African American Chamber of Commerce, leads initiatives supporting Black-owned businesses and economic development.</li>
-                  <li><b>COVID-19 Response:</b> Created and led the OAACC Resiliency Relief Program, raising over $1.1 million to support 250 African American owned businesses during the pandemic.</li>
-                  <li><b>National Recognition:</b> Led OAACC to be voted Chamber of the Year by the U.S. Black Chamber of Commerce in 2020, highlighting the organization's impact and effectiveness.</li>
-              </ul>
-
-              <h5 class="mt-4">Housing & Community Development</h5>
-              <ul>
-                  <li><b>Affordable Housing:</b> Partners with companies like Nibbi/Baines Group on marketing and outreach for affordable housing projects.</li>
-                  <li><b>Community Education:</b> Organizes housing workshops and forums focused on affordable housing access and resources for disenfranchised communities.</li>
-                  <li><b>Economic Justice:</b> Advocates for policies that support both business development and housing affordability to create sustainable communities.</li>
-              </ul>
-
-              <h5 class="mt-4">Additional Leadership Roles</h5>
-              <ul>
-                  <li><b>Women's Leadership:</b> Founding president of the National Coalition of 100 Black Women, Inc., Oakland Bay Area Chapter.</li>
-                  <li><b>Business Development:</b> Works with local and national partners to create opportunities for Black-owned businesses.</li>
-                  <li><b>Community Building:</b> Builds partnerships between business, government, and community organizations to advance economic equity.</li>
-              </ul>
-
-              <p class="mt-4">Guided by her mother's wisdom - "As you are moving up, take someone with you" - Cathy has dedicated her career to creating pathways for economic opportunity and community empowerment. Her work demonstrates the powerful connection between business success, affordable housing, and community well-being.</p>`,
-        imageExt: "jpg"
+              <p class="mt-4">Based in Oakland, Arielle can often be found biking around with her husband and two small kids, experiencing firsthand the importance of safe, accessible, and sustainable transportation options for families.</p>`,
+        imageExt: "png"
     }
 ];
 
@@ -471,10 +483,29 @@ function initializeCandidates() {
         return;
     }
 
-    // Add all candidate cards
-    candidates.forEach(candidate => {
-        candidateCards.innerHTML += createCandidateCard(candidate);
-        modalsContainer.innerHTML += createCandidateModal(candidate);
+    // Define the desired order of candidates
+    const orderedCandidates = [
+        candidates.find(c => c.name === "Nate Hanson"),
+        candidates.find(c => c.name === "Regina Chagolla"),
+        candidates.find(c => c.name === "Cathy Adams"),
+        candidates.find(c => c.name === "Genice Jacobs"),
+        candidates.find(c => c.name === "Ben Gould"),
+        candidates.find(c => c.name === "Sam Gould"),
+        candidates.find(c => c.name === "Sam Davis"),
+        candidates.find(c => c.name === "Lauren Wilson"),
+        candidates.find(c => c.name === "Zac Bowling"),
+        candidates.find(c => c.name === "Bobbi Lopez"),
+        candidates.find(c => c.name === "Shawn Danino"),
+        candidates.find(c => c.name === "Ashlee Jemmott"),
+        candidates.find(c => c.name === "Arielle Fleisher")
+    ];
+
+    // Add all candidate cards in the specified order
+    orderedCandidates.forEach(candidate => {
+        if (candidate) {
+            candidateCards.innerHTML += createCandidateCard(candidate);
+            modalsContainer.innerHTML += createCandidateModal(candidate);
+        }
     });
 }
 
