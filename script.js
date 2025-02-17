@@ -1,10 +1,43 @@
+// Hamburger Menu
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+
+function toggleMenu() {
+    hamburgerMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    body.classList.toggle('menu-open');
+}
+
+function closeMenu() {
+    hamburgerMenu.classList.remove('active');
+    navLinks.classList.remove('active');
+    body.classList.remove('menu-open');
+}
+
+hamburgerMenu.addEventListener('click', toggleMenu);
+
+// Close menu when clicking a link
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && 
+        !navLinks.contains(e.target) && 
+        !hamburgerMenu.contains(e.target)) {
+        closeMenu();
+    }
+});
+
 // Candidate data in ballot order
 const candidates = [
     {
         name: "Neil Tsutsui",
         title: "Environmental Scientist & UC Berkeley Professor",
         image: "images/AD-14 Candidate Headshots/Neil Tsutsui.jpg",
-        shortBio: "Distinguished UC Berkeley professor and environmental scientist leading crucial research on climate change and forest conservation, with extensive experience in environmental leadership.",
+        shortBio: "Distinguished UC Berkeley professor and environmental scientist leading crucial research to protect ecosystems and leading projects in forest conservation, with extensive experience in environmental leadership.",
         bio: `<p>A renowned environmental scientist and educator bringing extensive research expertise and practical leadership experience in environmental conservation and climate resilience.</p>
               
               <h5>Academic Leadership</h5>
@@ -353,7 +386,7 @@ const candidates = [
         name: "Dan Kalb",
         title: "Environmental Champion & Former Oakland Councilmember",
         image: "images/AD-14 Candidate Headshots/Dan Kalb.jpeg",
-        shortBio: "Veteran Oakland City Council member and environmental policy leader, championing climate action, affordable housing, and sustainable development for over a decade.",
+        shortBio: "Veteran Oakland City Council member and environmental policy leader, championing climate action, affordable housing, and sustainable development for 25 years.",
         bio: `<p>A proven environmental champion and policy leader with 12 years of experience on the Oakland City Council, advancing groundbreaking climate legislation and progressive reforms.</p>
               
               <h5>Environmental Leadership</h5>
