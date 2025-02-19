@@ -599,9 +599,43 @@ footer {
         transition: none !important;
     }
 
+    .hero-content {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .candidate-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .why-item, .vision-card {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
     .hero-cta a::after {
         transition: none;
     }
+
+    /* Ensure modal content is visible */
+    .modal.active .modal-content {
+        transform: none !important;
+    }
+
+    /* Ensure hamburger menu works without animations */
+    .nav-links {
+        transition: none !important;
+    }
+}
+
+/* Fallback for failed animations */
+.hero-content:not(:animated),
+.candidate-card:not(:animated),
+.why-item:not(:animated),
+.vision-card:not(:animated) {
+    opacity: 1;
+    transform: none;
 }
 
 /* High Contrast Mode */
